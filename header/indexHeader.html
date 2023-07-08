@@ -1,0 +1,137 @@
+    <p class="logo"><img src="assets/images/emza1.png" alt="">
+        <i 
+        id="logIn" 
+        class="logIn fas " 
+        ng-click="showLoginModal()" 
+        ng-class="delay ? 'fa-times text-danger' : 'fa-user-alt' "
+        ></i>
+    </p>
+    <input type="checkbox" name="" class="checkBtn" ng-model="checkBtnG"/>
+    <ol class="center">
+        <li data-idname="content1" class="tab_menu_item" href="#" ng-click="openWindowheader('detaile')" ng-class="{'active_tab': tabMenu.detaile}"><a>مشخصات</a></li>
+        <li data-idname="content2" class="tab_menu_item" href="#" ng-click="openWindowheader('skill') ; setSkillWidth()" ng-class="{'active_tab': tabMenu.skill}"><a>مهارت ها</a></li>
+        <li data-idname="content3" class="tab_menu_item" href="#" ng-click="openWindowheader('experience')" ng-class="{'active_tab': tabMenu.experience}"><a>تجربیات</a></li>
+        <li data-idname="content4" class="tab_menu_item" href="#" ng-click="openWindowheader('projects')" ng-class="{'active_tab': tabMenu.projects}"><a>پروژه ها</a></li>
+        <li data-idname="content5" class="tab_menu_item" href="#" ng-click="openWindowheader('contact')" ng-class="{'active_tab': tabMenu.contact}"><a>تماس باما</a></li>
+
+
+    </ol>
+
+    <div class="body_tabs " ng-class="openWHeader ? 'active_body_tabs' : '' " > 
+        <div class="close_tag d-flex justify-content-between">
+            <i id="close_window" class="fas fa-times close_window" ng-click="closeTabMenu()"></i>
+            <i id="edit_icon" class="fas fa-edit edit_icon pointer" ng-click="openEdit()"></i>
+        </div>
+        
+        <div  id="content1" class="part_body d-none" ng-class="{'d-none': !tabMenu.detaile}">
+            <div class="title_part_body">
+                <span>مشخصات</span>
+            </div>
+
+            <div class="paricular_row">
+                <ul>
+                    <li ng-repeat="p in particularItem">
+                        <p>{{p.keyName}}</p>
+                        <span>{{p.valueName}}</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="edit_window" ng-class=" {'zero_scale' : !editPortParticular}">
+                <ul>
+                    <li ng-repeat="p in newparticular">
+                        <p>{{p.keyName}}</p>
+                        <input type="text" ng-model="p.valueName">
+                    </li>
+                </ul>
+
+                <button class="btn btn_ok">تایید</button>
+                <button class="btn btn_cansel" ng-click="openEdit()">انصراف</button>
+
+            </div>
+
+
+
+        </div>
+
+
+        <div  id="content2" class="part_body d-none" ng-class="{'d-none': !tabMenu.skill}">
+            <div class="title_part_body">
+                <span>مهارت ها</span>
+            </div>
+
+            <div class="skill_row" ng-repeat="p in numberOfSkill track by $index">
+                <span class="progres_name">{{p.name}}<span class="skill_number" > {{p.value}}%</span></span>
+                <span class="progres_base"><span class="progres_var"></span></span>
+                <img src="{{p.imageUrl}}" alt="">
+            </div>
+
+        </div>
+
+
+        <div  id="content3" class="part_body d-none" ng-class="{'d-none': !tabMenu.experience}">
+            <div class="title_part_body">
+                <span>تجربیات</span>
+            </div>
+
+            <div class="experience_row">
+                <ul>
+                    <li ng-repeat="p in experienceItem">
+                        {{p.valueName}}
+                    </li>
+                </ul>
+            </div>
+
+            <div class="edit_window" ng-class=" {'zero_scale' : !editPortExperience}">
+                <ul>
+                    <li ng-repeat="p in newExperience">
+                        <p>-</p>
+                        <input type="text" ng-model="p.valueName">
+                    </li>
+                </ul>
+
+                <button class="btn btn_ok">تایید</button>
+                <button class="btn btn_cansel" ng-click="openEdit()">انصراف</button>
+
+            </div>
+
+
+        </div>
+
+
+        <div  id="content4" class="part_body d-none" ng-class="{'d-none': !tabMenu.projects}">
+            <div class="title_part_body">
+                <span>پروژه ها</span>
+            </div>
+
+            <div class="projects_row">
+                <ul>
+                    <li ng-repeat="p in projectsItem">
+                        <p>{{p.keyName}}</p>
+                        <a href="{{p.adressWeb}}">{{p.valueName}}</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div  id="content5" class="part_body d-none" ng-class="{'d-none': !tabMenu.contact}">
+            <div class="title_part_body">
+                <span>تماس با ما</span>
+            </div>
+
+            <div class="contact_row">
+                <ul>
+                    <li ng-repeat="p in contactItem">
+                        <p>{{p.keyName}}</p>
+                        <span>{{p.valueName}}</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+

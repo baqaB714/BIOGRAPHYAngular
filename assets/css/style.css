@@ -1,0 +1,101 @@
+@font-face {
+  font-family: IRANSans;
+  src: url("../fonts/IRANSans/IRANSansWeb_Light.woff") format("woff");
+}
+
+* {
+  direction: rtl;
+  text-align: right;
+  font-family: IRANSans;
+}
+
+body , html{
+  overflow-x: hidden;
+}
+
+.bg-gray {
+  background-color: #404e67;
+  color: #dcdcdc;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.fa-0-5x{
+  transform: scale(0.7);
+}
+
+.font_size_1{
+  font-size: 0.7rem;
+}
+.font_size_2{
+  font-size: 0.8rem;
+}
+
+.z-index100{
+  z-index: 100;
+}
+
+.bg_silver{
+  background: rgb(224, 224, 224);
+}
+
+.rotate{
+  transform: rotate(90deg);
+}
+
+.transition_200{
+  transition: all 200ms linear;
+}
+
+.transition_400{
+  transition: all 400ms linear;
+}
+
+.opacity_0{
+  opacity:0 ;
+}
+
+.btnhover:hover{
+  background-color: rgba(0, 0, 0, 0.726);
+}
+
+.width_4{
+  width: 4em !important;
+}
+
+.zero_scale{
+  transform: scale(0);
+}
+
+
+
+
+
+
+
+
+.bg_custom_yellow{
+  background:-webkit-gradient(linear, left top, right top, from( rgb(226, 160, 60)),to( rgb(248, 120, 0) ));
+  background: linear-gradient(to right , rgb(226, 160, 60), rgb(248, 120, 0))
+
+}
+
+.bg_custom_green{
+  background:-webkit-gradient(linear, left top, right top, from( rgb(59, 158, 59)),to( rgb(1, 110, 1) ));
+  background: linear-gradient(to right , rgb(59, 158, 59), rgb(1, 110, 1))
+
+}
+
+.bg_custom_red{
+  background:-webkit-gradient(linear, left top, right top, from( rgb(245, 103, 103)),to( rgb(211, 0, 0) ));
+  background: linear-gradient(to right , rgb(245, 103, 103), rgb(211, 0, 0))
+
+}
+.bg_custom_blue{
+  background:-webkit-gradient(linear, left top, right top, from( rgb(93, 164, 245)),to( rgb(0, 99, 212) ));
+  background: linear-gradient(to right , rgb(93, 164, 245), rgb(0, 99, 212))
+
+}
+

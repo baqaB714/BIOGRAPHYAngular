@@ -1,0 +1,12 @@
+[
+    {"name":"Adobe Premier", "pName": "" , "imageUrl":"assets/images/Apr.png","value":60} ,
+    {"name":"Adobe Photoshop", "pName": "" , "imageUrl":"assets/images/Aps.png","value":70} ,
+    {"name":"Adobe Illustrator", "pName": "" , "imageUrl":"assets/images/Aai.png","value":25} ,
+    {"name":"Adobe AfterEffect", "pName": "" , "imageUrl":"assets/images/Aae.png","value":27} ,
+    {"name":"HTML", "pName": "" , "imageUrl":"assets/images/1html.png","value":80} ,
+    {"name":"CSS", "pName": "" , "imageUrl":"assets/images/3css.png","value":60} ,
+    {"name":"JavaScript", "pName": "" , "imageUrl":"assets/images/2js.png","value":45} ,
+    {"name":"jQuery", "pName": "" , "imageUrl":"assets/images/jQuery.png","value":35} ,
+    {"name":"Bootstrap", "pName": "" , "imageUrl":"assets/images/bootstrap.png","value":55} ,
+    {"name":"C#", "pName": "" , "imageUrl":"assets/images/Csharp.png","value":31} 
+]
